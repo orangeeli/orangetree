@@ -17,8 +17,34 @@ body, html{
 
 }
 
-.nav-bar {
-  float: left;
+.navbar .navbar-links .navbar-link {
+    padding: 0 15px;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.navbar .navbar-links {
+    width: auto;
+    max-width: 1440px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar {
+  display: flex;
   clear: none;
   text-align: inherit;
   width: 100%;
@@ -29,10 +55,6 @@ body, html{
   -o-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
   padding-top: 30px;
 }
 
@@ -41,10 +63,10 @@ body, html{
 	width: 100%;
 	display: flex;
 	align-items: center;
-	background-color: rgba(0,0,0,1);
+	background-color: /*rgba(0,0,0,1)#FF7400*/#FF7444;
 	color: rgba(255,255,255,1);
 	font-family: sans-serif;
-	background-image:url('../images/eliseu_martinho_2.jpg');
+	/*background-image:url('../images/eliseu_martinho_2.jpg');*/
 	background-repeat:no-repeat;
 	background-size:contain;
 	background-position:center;
@@ -54,9 +76,13 @@ body, html{
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid #fff;
 	min-width: 50%; /*trying to give the feeling of center square*/
 	min-height: 50%;
+         width: 90vw;
+    margin-bottom: 60px;
+    font-size: 41px;
+    font-weight: 300;
+    line-height: 60px;
 }
 
 li {
