@@ -18,6 +18,8 @@
     wd.setInterval(flip, 5000);
   }
 
-  body? body.addEventListener("load", onLoad) : console.log("[DEBUG] ");
+  console.log("[DEBUG] Selected the body: " + body);
+
+  body? body.addEventListener("load", onLoad) : console.log("[DEBUG] No body.");
 
 })(window, document, Math);
