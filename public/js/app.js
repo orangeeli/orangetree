@@ -2,8 +2,6 @@
 
   var skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"];
 
-  var body = doc.querySelector("body");
-
   function onLoad(){
 
     var profession = doc.querySelector(".profession");
@@ -18,8 +16,8 @@
     wd.setInterval(flip, 5000);
   }
 
-  console.log("[DEBUG] Selected the body: " + body);
+  console.log("[DEBUG] Selected the document: " + doc);
 
-  body? body.addEventListener("load", onLoad) : console.log("[DEBUG] No body.");
+  doc? doc.addEventListener("DOMContentLoaded", onLoad, false) : console.log("[DEBUG] No document.");
 
 })(window, document, Math);
