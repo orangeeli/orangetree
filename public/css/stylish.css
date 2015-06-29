@@ -76,6 +76,11 @@ body, html{
   line-height: 60px;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+}
+
 li {
   display: list-item;
   list-style: none;
