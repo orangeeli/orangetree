@@ -62,23 +62,36 @@ body, html{
   /*background-image:url('../images/eliseu_martinho_2.jpg');*/
   background-size:contain;
   background: #FF7444 no-repeat center;
+  margin-bottom: -20px;
 }
 
 .inner-container {
   display: flex;
   flex-direction: column;
   min-width: 50%; /*trying to give the feeling of center square*/
-  min-height: 50%;
+  /*min-height: 50%; */
   width: 90vw;
   margin: 0 auto 60px;
   font-size: 41px;
-  font-weight: bolder;
+  /*font-weight: bolder;*/
   line-height: 60px;
 }
 
 .content {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-left: 23%;
+}
+
+.footer {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: rgba(255,255,255,1);
+  background: #FF7444 no-repeat center;
+  font-size: 11px;
 }
 
 li {

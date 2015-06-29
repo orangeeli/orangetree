@@ -14,6 +14,10 @@
       return m.floor(m.random() * max);
     }
     wd.setInterval(flip, 5000);
+
+    var year = doc.querySelector(".year");
+    year.innerText = new Date().getFullYear()+"";
+
   }
 
   console.log("[DEBUG] Selected the document: " + doc);
