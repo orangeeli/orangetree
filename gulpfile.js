@@ -47,7 +47,7 @@
         .pipe(pug({
           pretty: true
         }))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('./'));
     },
     mocha (){
       return gulp.src(['./test/**/*.js'], {read: false})
