@@ -1,5 +1,5 @@
 module.exports=
-  ((window, math)=>{
+  ((window, math, doc)=>{
     'use strict';
     const skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"],
       profession = doc.querySelector(".profession");
@@ -18,4 +18,4 @@ module.exports=
       }
     }
 
-  })(window, Math);
+  })(window, Math, document);
