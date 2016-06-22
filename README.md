@@ -25,3 +25,8 @@ I really enjoy the way [Gulp](http://gulpjs.com/) deals dependencies with code i
 
 ### Run local ###
 If you fill like playing with the project, you can run it locally by just firing the following command `...`.
+
+## License
+[MIT License](http://www.opensource.org/licenses/mit-license.php)
+
+**[Follow me (@orangeeli) on Twitter!](https://twitter.com/orangeeli)**
