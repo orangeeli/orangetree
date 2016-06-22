@@ -1,10 +1,9 @@
 module.exports=
   ((window, math, doc)=>{
     'use strict';
-    const skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"],
-      profession = doc.querySelector(".profession");
-
+    const skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"];
     function flip(){
+      let profession = doc.querySelector(".profession");
       profession.innerText = skills[random(skills.length-1)];
     }
 
