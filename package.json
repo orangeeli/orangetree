@@ -1,0 +1,45 @@
+{
+  "name": "orangetree",
+  "version": "1.0.0",
+  "description": "My beautiful something",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orangeeli/orangetree.git"
+  },
+  "keywords": [
+    "Homepage",
+    "beautiful",
+    "stuff"
+  ],
+  "author": "Eliseu Martinho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orangeeli/orangetree/issues"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-mocha": "^2.2.0",
+    "gulp-pug": "^2.0.0",
+    "gulp-pug-linter": "^0.2.1",
+    "gulp-sass": "^2.3.1",
+    "mocha": "^2.4.5",
+    "node-sass": "^3.7.0",
+    "pug": "^2.0.0-alpha6",
+    "browserify": "latest",
+    "gulp-uglify": "^1.5.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "latest"
+  },
+  "homepage": "https://github.com/orangeeli/orangetree#readme",
+  "dependencies": {
+    "gulp-nsp": "^2.4.1"
+  }
+}
