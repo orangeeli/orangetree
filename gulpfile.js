@@ -26,7 +26,9 @@
 
     browserify(){
       return browserify("./app/js/app.js")
+        .transform("babelify", {presets: ["es2015", "react"]}) // https://www.npmjs.com/package/babelify
         .bundle()
+        .on('error', function(err) { console.error(err); this.emit('end'); })
         .pipe(source("app.js"))
         .pipe(buffer())
         .pipe(uglify())
@@ -35,7 +37,7 @@
 
     sass(){
       return gulp.src('./app/css/app.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./public/css'));
     },
 
