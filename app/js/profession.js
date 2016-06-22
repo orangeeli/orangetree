@@ -1,5 +1,6 @@
 module.exports=
   ((window, math)=>{
+    'use strict';
     const skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"],
       profession = doc.querySelector(".profession");
 
