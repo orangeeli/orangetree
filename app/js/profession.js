@@ -1,10 +1,19 @@
 module.exports=
-  ((window, math, doc)=>{
+  ((math)=>{
     'use strict';
     const skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"];
-    function flip(){
-      let profession = doc.querySelector(".profession");
-      profession.innerText = skills[random(skills.length-1)];
+    function flip(doc){
+      return function(){
+        let profession = doc.querySelector(".profession"),
+          index = random(skills.length-1);
+
+        console.log(`The selected skill '${skills[index]}'`);
+
+        profession.innerText = skills[index];
+
+        console.log(`Inner text: '${profession.innerText}'`);
+      }
+
     }
 
     function random(max) {
@@ -12,9 +21,9 @@ module.exports=
     }
 
     return {
-      start (){
-        window.setInterval(flip, 5000);
+      start (document){
+        setInterval(flip(document), 5000);
       }
     }
 
-  })(window, Math, document);
+  })(Math);

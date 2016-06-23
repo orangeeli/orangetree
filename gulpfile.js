@@ -91,7 +91,7 @@
   gulp.task('clean:www', tasks.www.clean);
   gulp.task('security:nsp', tasks.nsp);
 
-  gulp.task('default', ['security:nsp', 'clean:www', 'compile:sass', 'lint:pug', 'compile:pug', 'compile:js']);
+  gulp.task('default', ['security:nsp', 'clean:www', 'test:mocha', 'compile:sass', 'lint:pug', 'compile:pug', 'compile:js']);
 
 })();
 
