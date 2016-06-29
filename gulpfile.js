@@ -1,4 +1,4 @@
-(()=>{
+(()=> {
 
   // TODO : each task should go to each separate module
 
@@ -16,7 +16,9 @@
     browserify = require('browserify'),
     uglify = require('gulp-uglify'),
     source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer');
+    buffer = require('vinyl-buffer'),
+    jshint = require('gulp-jshint'),
+    stylish = require('jshint-stylish');
 
   const tasks = {
 
@@ -24,21 +26,31 @@
       nsp({package: __dirname + '/package.json'}, cb);
     },
 
-    browserify(){
-      return browserify("./app/js/app.js")
-        .transform("babelify", {presets: ["es2015", "react"]}) // https://www.npmjs.com/package/babelify
-        .bundle()
-        .on('error', function(err) { console.error(err); this.emit('end'); })
-        .pipe(source("app.js"))
-        .pipe(buffer())
-        .pipe(uglify({
-          compress: {
-            drop_console: true
-          }
-        }))
-        .pipe(gulp.dest("./public/js"));
+    js: {
+      lint() {
+        return gulp.src('./lib/*.js')
+          .pipe(jshint())
+          .pipe(jshint.reporter(stylish))
+          .pipe(jshint.reporter('fail'))
+      },
+      browserify(){
+        return browserify("./app/js/app.js")
+          .transform("babelify", {presets: ["es2015", "react"]}) // https://www.npmjs.com/package/babelify
+          .bundle()
+          .on('error', function (err) {
+            console.error(err);
+            this.emit('end');
+          })
+          .pipe(source("app.js"))
+          .pipe(buffer())
+          .pipe(uglify({
+            compress: {
+              drop_console: true
+            }
+          }))
+          .pipe(gulp.dest("./public/js"));
+      }
     },
-
     sass(){
       return gulp.src('./app/css/app.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -69,14 +81,14 @@
         .pipe(pugLinter())
         .pipe(pugLinter.reporter());
     },
-    www : {
+    www: {
       clean () {
         return del([
           'public/**/*'
         ]);
       }
     },
-    partials : {
+    partials: {
       clean () {
         return del([
           'public/partials'
@@ -88,14 +100,15 @@
 
   // TODO: have another task for deploy
   gulp.task('compile:sass', tasks.sass);
-  gulp.task('compile:js', tasks.browserify);
+  gulp.task('compile:js', ['lint:js'], tasks.js.browserify);
+  gulp.task('lint:js', tasks.js.lint);
   gulp.task('lint:pug', tasks.pugLinter);
   gulp.task('compile:pug', tasks.pug);
   gulp.task('test:mocha', tasks.mocha);
   gulp.task('clean:www', tasks.www.clean);
   gulp.task('security:nsp', tasks.nsp);
 
-  gulp.task('default', ['security:nsp', 'clean:www', 'test:mocha', 'compile:sass', 'lint:pug', 'compile:pug', 'compile:js']);
+  gulp.task('default', ['security:nsp', 'clean:www', 'test:mocha', 'compile:sass', 'lint:pug', 'compile:pug', 'lint:js', 'compile:js']);
 
 })();
 
