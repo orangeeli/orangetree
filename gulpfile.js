@@ -31,7 +31,11 @@
         .on('error', function(err) { console.error(err); this.emit('end'); })
         .pipe(source("app.js"))
         .pipe(buffer())
-        .pipe(uglify())
+        .pipe(uglify({
+          compress: {
+            drop_console: true
+          }
+        }))
         .pipe(gulp.dest("./public/js"));
     },
 

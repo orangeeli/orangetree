@@ -5,7 +5,7 @@ import * as profession from "./profession";
   'use strict';
   function onLoad(){
     year.update(doc);
-    profession.start(wd, document);
+    profession.start(doc);
   }
 
   doc? doc.addEventListener("DOMContentLoaded", onLoad, false) : console.log("[DEBUG] No document.");

@@ -4,6 +4,10 @@ module.exports=
     const skills = ["Seasoned Software Engineer", "Motorcycle Lover", "Crossfit Enthusiast", "Folk Dancing amateur"];
     function flip(doc){
       return function(){
+
+        console.log("The doc: " + doc);
+        console.log("The doc query selector: " + doc.querySelector);
+
         let profession = doc.querySelector(".profession"),
           index = random(skills.length-1);
 
