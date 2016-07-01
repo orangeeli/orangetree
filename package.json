@@ -4,7 +4,11 @@
   "description": "My beautiful something",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test:mocha"
+    "test": "gulp test:mocha",
+    "start" : "NODE_ENV=development node server.js"
+  },
+  "engines": {
+    "node": "6.2.0"
   },
   "repository": {
     "type": "git",
