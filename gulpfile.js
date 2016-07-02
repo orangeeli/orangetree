@@ -29,8 +29,10 @@
 
     js: {
       lint() {
-        return gulp.src('./lib/*.js')
-          .pipe(jshint())
+        return gulp.src('./app/js/*.js')
+          .pipe(jshint({
+            esnext : true
+          }))
           .pipe(jshint.reporter(stylish))
           .pipe(jshint.reporter('fail'))
       },

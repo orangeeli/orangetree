@@ -16,7 +16,7 @@ module.exports=
         profession.innerText = skills[index];
 
         console.log(`Inner text: '${profession.innerText}'`);
-      }
+      };
 
     }
 
@@ -28,6 +28,6 @@ module.exports=
       start (document){
         setInterval(flip(document), 5000);
       }
-    }
+    };
 
   })(Math);

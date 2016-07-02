@@ -8,6 +8,10 @@ import * as profession from "./profession";
     profession.start(doc);
   }
 
-  doc? doc.addEventListener("DOMContentLoaded", onLoad, false) : console.log("[DEBUG] No document.");
+  if(doc){
+    doc.addEventListener("DOMContentLoaded", onLoad, false);
+  } else {
+    console.log("[DEBUG] No document.");
+  }
 
 })(window, document);

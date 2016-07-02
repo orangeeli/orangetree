@@ -6,6 +6,6 @@ module.exports=
         const year = doc.querySelector(".year");
         year.innerText = `${new Date().getFullYear()}`;
       }
-    }
+    };
 
   })();
