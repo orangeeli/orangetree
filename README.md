@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/orangeeli/orangetree.svg?branch=master)](https://travis-ci.org/orangeeli/orangetree) [![Code Climate](https://codeclimate.com/github/orangeeli/orangetree/badges/gpa.svg)](https://codeclimate.com/github/orangeeli/orangetree)
+[![Build Status](https://travis-ci.org/orangeeli/orangetree.svg?branch=master)](https://travis-ci.org/orangeeli/orangetree) [![Code Climate](https://codeclimate.com/github/orangeeli/orangetree/badges/gpa.svg)](https://codeclimate.com/github/orangeeli/orangetree) [![Coverage Status](https://coveralls.io/repos/github/orangeeli/orangetree/badge.svg?branch=master)](https://coveralls.io/github/orangeeli/orangetree?branch=master)
 
 # orangetree
 
