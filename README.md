@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/orangeeli/orangetree.svg?branch=master)](https://travis-ci.org/orangeeli/orangetree)
+[![Build Status](https://travis-ci.org/orangeeli/orangetree.svg?branch=master)](https://travis-ci.org/orangeeli/orangetree) [![Code Climate](https://codeclimate.com/github/orangeeli/orangetree/badges/gpa.svg)](https://codeclimate.com/github/orangeeli/orangetree)
 
 # orangetree
 
