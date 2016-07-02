@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/orangeeli/orangetree.svg?branch=master)](https://travis-ci.org/orangeeli/orangetree)
+
 # orangetree
 
 This is my personal webpage. It's a static generated website yet I'm not using a particular static website generator since most of them had more functionality than I actually needed and I didn't have much control on what I should require to put up the website.
