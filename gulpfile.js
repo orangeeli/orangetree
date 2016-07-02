@@ -18,7 +18,8 @@
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish');
+    stylish = require('jshint-stylish'),
+    rename = require('gulp-rename');
 
   const tasks = {
 
@@ -48,12 +49,14 @@
               drop_console: true
             }
           }))
+          .pipe(rename("app.min.js"))
           .pipe(gulp.dest("./public/js"));
       }
     },
     sass(){
       return gulp.src('./app/css/app.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(rename("app.min.css"))
         .pipe(gulp.dest('./public/css'));
     },
 
