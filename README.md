@@ -19,7 +19,7 @@ Every module is written with ES6/ES2015 syntax and then transformed into ES5 and
 
 ### Gulp ###
 
-As mentioned before, running `gulp` will compile and output everything from the `app` folder into the `public` folder. Worth mentioning that I'm also using [nsp](https://nodesecurity.io/) to check for known vulnerabilities in my project.
+As mentioned before, running `gulp` will compile and output everything from the `app` folder into the `public` folder. Worth mentioning that I'm also using [nsp](https://nodesecurity.io/) to check for known vulnerabilities in my project. You can see [here](https://nodesecurity.io/advisories) the full list.
 
 #### Why Gulp? ####
 
