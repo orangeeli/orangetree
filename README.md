@@ -2,20 +2,20 @@
 
 # orangetree
 
-This is my personal webpage. It's a static generated website yet I'm not using a particular static website generator since most of them had more functionality than I actually needed and I didn't have much control on what I should require to put up the website.
+This is my personal webpage. It's a static generated website yet I'm not using any particular static website generator, since most of them had more functionality than I actually needed, and I didn't have much control on what I could should to put up the website.
 
 ## Structure ##
 
 The  `./app` folder contains the application files. Running `gulp` will output everything from the `./app` folder into the `./public` folder. Tests will run as well.
 
 ### HTML ###
-I using [pug](https://github.com/pugjs/pug), formally known as jade, as the HTML template engine. If you know [HAML](http://haml.info/) from ruby, you'll feel at home. 
+I'm using [pug](https://github.com/pugjs/pug), formally known as jade, as the HTML template engine. If you know [HAML](http://haml.info/) from ruby, you'll feel at home. 
 
 ### CSS ###
 Using [SASS](https://github.com/sass/node-sass) here. Nothing special. =)
 
 ### Javascript ###
-Every module is written with ES2015 syntax and then transformed into ES5 and compiled. 
+Every module is written with ES6/ES2015 syntax and then transformed into ES5 and compiled. 
 
 ### Gulp ###
 
