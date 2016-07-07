@@ -26,7 +26,7 @@ As mentioned before, running `gulp` will compile and output everything from the 
 I really enjoy the way [Gulp](http://gulpjs.com/) deals dependencies with code instead of configuration. I've tried [Grunt](http://gruntjs.com/) but it wasn't so nice to handle and the way dependencies are declared resembled long and convoluted xml configuration files. If someone has an alternative to Gulp, let me know.
 
 ### Run local ###
-If you feel like playing with the project, you can run it locally by just firing the following command `...`.
+If you feel like playing with the project, you can clone it and run it locally by just firing the command `npm start`.
 
 ## License
 [MIT License](http://www.opensource.org/licenses/mit-license.php)
